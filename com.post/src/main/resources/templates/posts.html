@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>new post added</title>
+</head>
+<body>
+<h1>posts Details</h1>
+<span th:each="post:${allPosts}">
+<p><Strong>Caption:</Strong><span th:text="${post.caption}"></span></p>
+
+<p><Strong>photo:</Strong></p>
+
+<img th:if="${post.photoBase64}" th:src="'data:image/jpeg;base64,' + ${post.photoBase64}"/>
+<hr/>
+</span>
+</body>
+</html>
